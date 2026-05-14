@@ -78,4 +78,3 @@ Receive a photo of the intruder on your phone each time the screen locks.
 **Too many false locks** — increase `--tolerance` (e.g. `0.6`) or `--streak` (e.g. `5`). Re-enrolling in the same lighting conditions as your workspace also helps.
 
 **Screen doesn't lock** — FaceGuard tries three methods (CGSession → AppleScript → pmset). The AppleScript method requires Accessibility permission: System Settings → Privacy & Security → Accessibility.
-# face-lock
