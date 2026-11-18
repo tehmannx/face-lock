@@ -21,6 +21,14 @@ python3 faceguard.py --enroll
 python3 faceguard.py
 ```
 
+If `python3` is Homebrew's Python, pip refuses to install system-wide (`externally-managed-environment`). Use a virtual environment instead, and activate it before running `faceguard.py`:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+bash install.sh
+```
+
 During enrollment, look at the camera and press **Space** to capture your face from several angles (6–10 shots recommended). Press **Q** when done.
 
 ## Options

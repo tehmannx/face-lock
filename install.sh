@@ -54,10 +54,13 @@ info "Installing Python packages (this may take a few minutes — dlib compiles 
 python3 -m pip install --upgrade pip --quiet
 
 # Install packages
+# setuptools<81: face_recognition_models imports pkg_resources, which newer
+# setuptools no longer ships and Python 3.12+ venvs don't include at all.
 python3 -m pip install \
     opencv-python \
     face_recognition \
     numpy \
+    "setuptools<81" \
     --quiet
 
 success "All dependencies installed!"
@@ -72,6 +75,7 @@ echo ""
 info "Verifying imports..."
 python3 - <<'EOF'
 import cv2
+import face_recognition_models  # raises on failure; face_recognition would just print + exit 0
 import face_recognition
 import numpy
 print(f"  opencv-python    {cv2.__version__}")
