@@ -1,5 +1,9 @@
 # CLAUDE.md
 
+@AGENTS.md
+
+> **Active roadmap:** Read [`PLAN.md`](./PLAN.md) before starting new feature work (v2 native macOS menu-bar app plan). Read [`REPORT.md`](./REPORT.md) for the exact technical audit of the current v1 Python CLI.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Commands
