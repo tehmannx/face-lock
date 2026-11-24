@@ -23,7 +23,7 @@ Deliver a **local-first, zero-subscription macOS menu-bar app** that locks your 
   - Store face embeddings as signed/encrypted JSON or CoreData in Application Support (replace v1's unsafe `pickle`).
   - Store Telegram bot token in **macOS Keychain** (never plaintext `.env`).
   - Cap/prune saved intruder snapshots (e.g., keep last 50 or 30 days) with an in-app viewer & "Clear Snapshots" button.
-- **Packaging & Distribution:** Signed & notarized `.dmg` (and Homebrew Cask) via GitHub Releases.
+- **Packaging & Distribution:** Unsigned open-source `.dmg` via GitHub Releases (linked from README; no paid Apple Developer account required — include a 1-line macOS first-open / quarantine note).
 
 ---
 
@@ -75,4 +75,4 @@ Expose clean controls (with sensible defaults carried over from v1's tuned behav
 - **M1 — Native Skeleton & Permissions:** SwiftUI menu-bar app, Camera permission onboarding, `AVCaptureSession` live preview, clean lock/unlock lifecycle handling, reliable macOS screen lock.
 - **M2 — On-Device Face Enrollment & Recognition:** Vision face detection + CoreML face embeddings, guided enrollment UI (single-face guard), two-stage lock logic, Keychain/Application Support storage.
 - **M3 — Easy Telegram Wizard & Settings:** Guided BYO-Bot linking (auto `getUpdates` polling + test message), full Settings window, Armed/Auto-Arm on idle, snapshot history & pruning.
-- **M4 — Polish & Public Release:** App icon, README update + demo GIF, MIT `LICENSE`, GitHub Release with signed/notarized `.dmg` (and Homebrew Cask).
+- **M4 — Polish & Public Release:** App icon, README update + demo GIF + unsigned-install note, MIT `LICENSE`, GitHub Release with unsigned `.dmg`.
